@@ -4,9 +4,9 @@ import Link from "next/link"
 export default function jobOffer(){
 
     const listCompany = [
-        {id:"001",title:"Blockfint",address:"Saint Lotus",Tel:"0987654321",logo:"https://drive.google.com/file/d/19l9NAB9P8Lmd0GhIPavxgayEfkQtO00O/view?usp=sharing",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
-        {id:"002",title:"Blockfint",address:"Saint Lotus",Tel:"0987654321",logo:"https://drive.google.com/file/d/19l9NAB9P8Lmd0GhIPavxgayEfkQtO00O/view?usp=sharing",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
-        {id:"003",title:"Blockfint",address:"Saint Lotus",Tel:"0987654321",logo:"https://drive.google.com/file/d/19l9NAB9P8Lmd0GhIPavxgayEfkQtO00O/view?usp=sharing",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
+        {id:"001",title:"Blockfint",address:"Saint Lotus",Tel:"0987654321",logo:"https://drive.google.com/uc?id=19l9NAB9P8Lmd0GhIPavxgayEfkQtO00O",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
+        {id:"002",title:"Blockfint",address:"Saint Lotus",Tel:"0987654321",logo:"https://drive.google.com/uc?id=19l9NAB9P8Lmd0GhIPavxgayEfkQtO00O",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
+        {id:"003",title:"Blockfint",address:"Saint Lotus",Tel:"0987654321",logo:"https://drive.google.com/uc?id=19l9NAB9P8Lmd0GhIPavxgayEfkQtO00O",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
     ]
 
     return(
@@ -31,3 +31,4 @@ export default function jobOffer(){
         </div>
     )
 }
+
