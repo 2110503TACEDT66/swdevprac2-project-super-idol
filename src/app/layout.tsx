@@ -6,7 +6,7 @@ import TopMenu from "@/components/TopMenu";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OnlineJobFair",
+  title: "OnlineJobFair-BySuperIdol",
   description: "PresentedBySuperIdol",
 };
 

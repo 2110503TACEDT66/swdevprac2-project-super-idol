@@ -10,7 +10,7 @@ export default function TopMenu(){
             <div className='py-3'>
                 <TopMenuItem title='Job Offer' pageRef='/jobOffer'/>
                 <TopMenuItem title='Company' pageRef='/company'/>
-                <TopMenuItem title='Profile' pageRef='/'/>
+                <TopMenuItem title='Profile' pageRef='/profile'/>
             </div>
         </div>
     )
