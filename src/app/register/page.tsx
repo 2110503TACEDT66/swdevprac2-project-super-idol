@@ -9,7 +9,9 @@ export default function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [tel, setTel] = useState("");
+  const [profilePic, setProfilePic] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
   const router = useRouter();
 
@@ -18,19 +20,21 @@ export default function RegisterPage() {
       name.trim() !== "" &&
       email.trim() !== "" &&
       password.trim() !== "" &&
-      tel.trim() !== ""
+      tel.trim() !== "" &&
+      profilePic.trim() !== "" &&
+      password === confirmPassword
     );
   };
 
   useEffect(() => {
     setIsFormValid(checkFormValidity());
-  }, [name, email, password, tel]);
+  }, [name, email, password, tel, profilePic, confirmPassword]);
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       console.log("Registration successful");
-      //   await Register({ name, email, password, tel });
+      await Register({ name, email, password, tel, profilePic });
       router.push("/api/auth/signin");
     } catch (error) {
       console.error("Registration failed:", error);
@@ -72,10 +76,30 @@ export default function RegisterPage() {
         </div>
         <div className="mb-4">
           <TextField
+            label="Confirm Password"
+            type="password"
+            value={confirmPassword || ""}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            fullWidth
+            variant="outlined"
+          />
+        </div>
+        <div className="mb-4">
+          <TextField
             label="Telephone"
             type="tel"
             value={tel || ""}
             onChange={(e) => setTel(e.target.value)}
+            fullWidth
+            variant="outlined"
+          />
+        </div>
+        <div className="mb-4">
+          <TextField
+            label="Profile Picture"
+            type="file"
+            value={profilePic || ""}
+            onChange={(e) => setProfilePic(e.target.value)}
             fullWidth
             variant="outlined"
           />

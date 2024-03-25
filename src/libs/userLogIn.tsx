@@ -1,13 +1,19 @@
-export default async function userLogIn(userEmail: string, userPassword: string) {
-    const response = await fetch("https://api.example.com/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: userEmail, password: userPassword }),
-        });
-    if (!response.ok) {
-        throw new Error("Failed to log in");
+export default async function userLogIn(
+  userEmail: string,
+  userPassword: string
+) {
+  const response = await fetch(
+    "https://online-jobfair.vercel.app/api/v1/auth/login",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: userEmail, password: userPassword }),
     }
-    return await response.json();
-};
+  );
+  if (!response.ok) {
+    throw new Error("Failed to log in");
+  }
+  return await response.json();
+}
