@@ -32,11 +32,18 @@ export default function companyDetail({params}:{params:{id:string}}){
                     </div>
                 </div>
             </div>
-            {/* <Link href={}>
-                <button className="my-1 ml-[900px] py-1 rounded-sm w-[10vw] bg-[#F15025] text-white font-semibold">
-                    Back
-                </button>
-            </Link> */}
+            <div className="flex flex-row">
+                <Link href={"/company"}>
+                    <button className="my-1 ml-[900px] py-1 rounded-sm w-[10vw] bg-[#F15025] text-white font-semibold">
+                        Back
+                    </button>
+                </Link>
+                <Link href={"/"}>
+                    <button className="my-1 ml-[500px] py-1 rounded-sm w-[10vw] bg-[#F15025] text-white font-semibold">
+                        Book
+                    </button>
+                </Link>
+            </div>
         </div>
     )
 }
