@@ -1,11 +1,12 @@
 import { TextField } from "@mui/material"
+import Link from "next/link"
 
 export default function InterviewSection(){
     
     const listInterviews = [
-        {title:"Front-End",company:"Blockfint",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
-        {title:"Back-End",company:"Blockfint",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
-        {title:"UX/UI",company:"Blockfint",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
+        {id:"001",title:"Front-End",company:"Blockfint",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
+        {id:"002",title:"Back-End",company:"Blockfint",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
+        {id:"003",title:"UX/UI",company:"Blockfint",description:"need skilled frontend dev. tons of experience need 20 years as a high school work full time 24/7 salary: 1 dollars Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"},
     ]
 
     return(
@@ -19,7 +20,9 @@ export default function InterviewSection(){
                                 <div className="text-2xl font-bold">{x.title}</div>
                                 <div className="font-bold">&nbsp;&nbsp;{x.company}</div>
                                 <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{x.description}</div>
-                                <button className='my-1 ml-[580px] py-1 rounded-sm w-[10vw] bg-[#F15025] text-white font-semibold'>Edit</button>
+                                <Link href={`/profile/${x.id}`}>
+                                    <button className='my-1 ml-[580px] py-1 rounded-sm w-[10vw] bg-[#F15025] text-white font-semibold'>Edit</button>
+                                </Link>
                             </div>
                         )})} 
                 </div>

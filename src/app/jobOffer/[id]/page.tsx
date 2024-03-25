@@ -46,7 +46,7 @@ export default function jobOfferDetail({params}:{params:{id:string}}){
                     </Link>
                 </div>
                 <div>
-                    <Link href={"/"}>
+                    <Link href={`/jobOffer/${params.id}/book`}>
                         <button className="my-1 py-1 rounded-sm w-[10vw] bg-[#F15025] text-white font-semibold">
                             Book
                         </button>

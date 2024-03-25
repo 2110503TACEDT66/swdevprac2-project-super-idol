@@ -44,7 +44,7 @@ export default function companyDetail({params}:{params:{id:string}}){
                 <div>
                     <Link href={"/"}>
                         <button className="my-1 py-1 rounded-sm w-[10vw] bg-[#F15025] text-white font-semibold">
-                            Book
+                            Website
                         </button>
                     </Link>
                 </div>
