@@ -8,7 +8,7 @@ export default async function companyDetail({
   params: { id: string };
 }) {
   const responseCompany = await getCompany(params.id);
-  const company = responseCompany.data;
+  const company = responseCompany.data as CompanyItem;
   console.log(company);
   return (
     <div className="bg-[#E6E8E6] w-[74rem] my-7 mx-10 rounded">

@@ -113,7 +113,7 @@ export default function RegisterPage() {
           variant="contained"
           color="primary"
           disabled={!isFormValid}
-          className="w-full text-black hover:text-white hover:bg-blue-500"
+          className="w-full text-black hover:text-white hover:bg-[#F15025] border-2 border-[#F15025]"
         >
           Register
         </Button>
