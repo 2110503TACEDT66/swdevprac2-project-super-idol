@@ -1,7 +1,7 @@
 import Image from "next/image";
 import TopMenuItem from "./TopMenuItem";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/auth";
 
 export default async function TopMenu() {
   const session = await getServerSession(authOptions);
