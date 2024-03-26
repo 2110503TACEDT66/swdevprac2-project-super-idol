@@ -42,6 +42,7 @@ export default function jobOfferBook({ params }: { params: { id: string } }) {
         }
         router.push("/profile");
       } catch (error) {
+        alert("Wrong Date")
         console.error("Registration failed:", error);
       }
     }

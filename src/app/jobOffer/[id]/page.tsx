@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import getJobOffer from "@/libs/getJobOffer";
 
@@ -10,16 +11,16 @@ export default async function jobOfferDetail({params}:{params:{id:string}}){
                 {jobOffer.name}
             </div>
             <div className="bg-[#CED0CE] mx-10 my-3 rounded">
-                <div className="text-xl pt-10">
+                <div className="text-xl pt-1">
                     <div className="m-5 flex flex-row">
                         <div className="font-bold">Company:&nbsp;&nbsp;</div>
                         {jobOffer.company}
                     </div>
                 </div>
-                <div className="m-5 text-xl">
+                <div className="m-5 ">
                     {jobOffer.description}
                 </div>
-                <div className="text-xl pb-16">
+                <div className="text-lg pb-6">
                     <div className="m-5 flex flex-row">
                         <div className="font-bold">Salary:&nbsp;&nbsp;</div>
                         {jobOffer.salary}
@@ -34,7 +35,7 @@ export default async function jobOfferDetail({params}:{params:{id:string}}){
                     </div>
                 </div>
             </div>
-            <div className="justify-between flex flex-row mx-32 py-10">
+            <div className="justify-between flex flex-row mx-32 py-5">
                 <div>
                     <Link href={"/jobOffer"}>
                         <button className="my-1 py-1 rounded-sm w-[10vw] bg-[#F15025] text-white font-semibold">

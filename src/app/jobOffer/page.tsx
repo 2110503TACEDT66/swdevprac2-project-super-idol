@@ -1,21 +1,18 @@
+'use client'
 import { TextField } from "@mui/material";
 import Link from "next/link";
 import getJobOffers from "@/libs/getJobOffers";
 
 export default async function jobOffer() {
-  const listJobOffer = await getJobOffers();
+  const listJobOffer = await getJobOffers()
+  console.log(listJobOffer)
 
   return (
     <div>
       <div className="mt-5 m-10 w-[74rem]">
         <div className="text-center mt-5 font-bold text-3xl">Job Offer</div>
         <div className="bg-[#E6E8E6] w-full mt-5 rounded-lg">
-          <TextField
-            className="bg-[#FFD3C7] mt-7 mb-5 mx-10 w-[70rem]"
-            label="Search"
-            variant="outlined"
-          ></TextField>
-          <div className="interview-list-container overflow-y-auto h-[410px]">
+          <div className="interview-list-container overflow-y-auto h-[500px]">
             {listJobOffer.data.map((x) => {
               return (
                 <div className="bg-[#CED0CE] mx-10 my-5 p-5 rounded">

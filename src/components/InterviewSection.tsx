@@ -8,12 +8,7 @@ export default async function InterviewSection({ token }: { token: string }) {
     <div className="ml-10 mt-5 mr-10 w-full">
       <div className="text-center mt-5 font-bold text-3xl">Your Interviews</div>
       <div className="bg-[#E6E8E6] w-full mt-5 rounded-lg">
-        <TextField
-          className="bg-[#FFD3C7] mt-7 mb-5 mx-10 w-[48rem]"
-          label="Search"
-          variant="outlined"
-        ></TextField>
-        <div className="interview-list-container overflow-y-auto h-[410px]">
+        <div className="interview-list-container overflow-y-auto h-[500px]">
           {listInterviews.data.map((x) => {
             return (
               <div className="bg-[#CED0CE] mx-10 my-5 p-5 rounded">

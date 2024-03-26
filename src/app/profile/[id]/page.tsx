@@ -43,6 +43,7 @@ export default function jobOfferEdit({ params }: { params: { id: string } }) {
         }
         router.push("/profile");
       } catch (error) {
+        alert("Wrong Date")
         console.error("Registration failed:", error);
       }
     }
@@ -51,6 +52,7 @@ export default function jobOfferEdit({ params }: { params: { id: string } }) {
   const handleDeleteInterview = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      alert("Deleted")
       if (session) {
         await deleteInterview(params.id, session.user.token);
       }
