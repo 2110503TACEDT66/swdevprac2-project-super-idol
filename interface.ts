@@ -29,3 +29,27 @@ interface JobOfferItem {
     company: string;
     id: string;
 }
+
+interface InterviewsJson {
+    success: boolean;
+    data: InterviewItem[];
+}
+
+interface InterviewItem {
+    _id: string;
+    joboffer: {
+        _id: string;
+        name: string;
+        description: string;
+        company: {
+            _id: string;
+            name: string;
+            id: string;
+        }
+        id: string;
+    }
+    user: string;
+    date: string;
+    createAt: string;
+    __v: number;
+}
