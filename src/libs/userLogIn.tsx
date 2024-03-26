@@ -3,7 +3,7 @@ export default async function userLogIn(
   userPassword: string
 ) {
   const response = await fetch(
-    "https://online-jobfair.vercel.app/api/v1/auth/login",
+    "https://superidol-backend.onrender.com/api/v1/auth/login",
     {
       method: "POST",
       headers: {

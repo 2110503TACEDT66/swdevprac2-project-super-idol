@@ -15,15 +15,7 @@ export const authOptions: AuthOptions = {
               if (!credentials) {
                 return null;
               }
-              // const user = await userLogIn(credentials.email, credentials.password);
-              const user = {
-                id: "123",
-                name: "test",
-                email: "sda@asd",
-                tel: "123",
-                role: "user",
-                token: "123"
-              }
+              const user = await userLogIn(credentials.email, credentials.password);
               if (user) {
                 return user;
               } else {

@@ -1,21 +1,27 @@
+const fetch = require("node-fetch");
+
 interface RegisterProps {
   name: string;
   email: string;
   password: string;
-  tel: string;
-  profilePic: string;
+  telephone_number: string;
+  ImageURL: string;
 }
 export default async function Register(user: RegisterProps) {
   const response = await fetch(
-    "https://online-jobfair.vercel.app/api/v1/auth/register",
+    "https://superidol-backend.onrender.com/api/v1/auth/register",
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user,
+        name: user.name,
+        email: user.email,
+        password: user.password,
+        telephone_number: user.telephone_number,
         role: "user",
+        ImageURL: user.ImageURL,
       }),
     }
   );

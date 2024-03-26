@@ -6,8 +6,8 @@ declare module "next-auth" {
             _id: string,
             name: string,
             email: string,
-            tel: string,
-            img: string,
+            telephone_number: string,
+            ImageURL: string,
             role: string,
             token: string
         }

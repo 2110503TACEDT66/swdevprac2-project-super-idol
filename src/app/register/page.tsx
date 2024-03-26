@@ -33,8 +33,13 @@ export default function RegisterPage() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      console.log("Registration successful");
-      await Register({ name, email, password, tel, profilePic });
+      await Register({
+        name: name,
+        email: email,
+        password: password,
+        telephone_number: tel,
+        ImageURL: profilePic,
+      });
       router.push("/api/auth/signin");
     } catch (error) {
       console.error("Registration failed:", error);
@@ -47,7 +52,7 @@ export default function RegisterPage() {
       <form onSubmit={handleRegister} className="w-full max-w-sm">
         <div className="mb-4">
           <TextField
-            label="Name"
+            label="Name - Lastname"
             value={name || ""}
             onChange={(e) => setName(e.target.value)}
             fullWidth
@@ -97,7 +102,6 @@ export default function RegisterPage() {
         <div className="mb-4">
           <TextField
             label="Profile Picture"
-            type="file"
             value={profilePic || ""}
             onChange={(e) => setProfilePic(e.target.value)}
             fullWidth
