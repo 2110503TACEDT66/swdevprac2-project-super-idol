@@ -2,7 +2,7 @@ import Link from "next/link";
 import getJobOffer from "@/libs/getJobOffer";
 
 export default async function jobOfferDetail({params}:{params:{id:string}}){
-    const jobOffer:JobOfferItem = await getJobOffer(params.id);
+    const jobOffer = await getJobOffer(params.id);
 
     return(
         <div className="bg-[#E6E8E6] w-[74rem] my-7 mx-10 rounded">
@@ -43,7 +43,7 @@ export default async function jobOfferDetail({params}:{params:{id:string}}){
                     </Link>
                 </div>
                 <div>
-                    <Link href={`/jobOffer/${params.id}/book`}>
+                    <Link href={`/jobOffer/${params.id}/book?name=${jobOffer.name}`}>
                         <button className="my-1 py-1 rounded-sm w-[10vw] bg-[#F15025] text-white font-semibold">
                             Book
                         </button>
