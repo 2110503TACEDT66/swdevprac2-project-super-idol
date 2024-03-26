@@ -4,7 +4,6 @@ import getCompanies from "@/libs/getCompanies";
 
 export default async function jobOffer() {
   const listCompanies = await getCompanies();
-  console.log(listCompanies.data);
   return (
     <div>
       <div className="mt-5 m-10 w-[74rem]">

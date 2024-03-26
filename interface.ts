@@ -26,7 +26,11 @@ interface JobOfferItem {
     salary: string;
     workstyle: string;
     address: string;
-    company: string;
+    company: {
+        _id: string;
+        name: string;
+        id: string;
+    };
     id: string;
 }
 

@@ -9,7 +9,6 @@ export default async function companyDetail({
 }) {
   const responseCompany = await getCompany(params.id);
   const company = responseCompany.data as CompanyItem;
-  console.log(company);
   return (
     <div className="bg-[#E6E8E6] w-[74rem] my-7 mx-10 rounded">
       <div className="text-center font-bold text-5xl pt-3">{company.name}</div>
