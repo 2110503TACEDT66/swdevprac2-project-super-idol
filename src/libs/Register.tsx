@@ -1,5 +1,3 @@
-const fetch = require("node-fetch");
-
 interface RegisterProps {
   name: string;
   email: string;
